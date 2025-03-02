@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1740912956.80056 "/Users/richardcernansky/Desktop/bc_article/article.tex" "article.pdf" "article" 1740912958.33876 0
-  "/Users/richardcernansky/Desktop/bc_article/article.tex" 1740912956.33882 7877 79903471711318087e286e8046a846ae ""
+["pdflatex"] 1740913092.33514 "/Users/richardcernansky/Desktop/bc_article/article.tex" "article.pdf" "article" 1740913093.74988 0
+  "/Users/richardcernansky/Desktop/bc_article/article.tex" 1740913092.14387 8590 d103cdf2f1b79e4417a11c195f321e4a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1202520719 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -222,9 +222,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1733312353.91201 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733312303 8221429 ac6dbdced22ee8dfacda136694b71f0f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "article.aux" 1740912958.21601 1700 597cf264b0ec6944797e0dc63509f361 "pdflatex"
-  "article.out" 1740912958.21655 445 d8cdbe15c5edce9238fdfb6d9f079726 "pdflatex"
-  "article.tex" 1740912956.33882 7877 79903471711318087e286e8046a846ae ""
+  "article.aux" 1740913093.64743 1700 597cf264b0ec6944797e0dc63509f361 "pdflatex"
+  "article.out" 1740913093.64795 445 d8cdbe15c5edce9238fdfb6d9f079726 "pdflatex"
+  "article.tex" 1740913092.14387 8590 d103cdf2f1b79e4417a11c195f321e4a ""
   (generated)
   "article.aux"
   "article.log"

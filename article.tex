@@ -54,23 +54,24 @@ Methods
     \label{tab:comparison}
 \end{table}
 
+
 \begin{figure}[h!]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-    view={60}{30},             % 3D viewing angles (azimuth, elevation)
-    z buffer=sort,             % Ensures correct front-to-back rendering
+    view={60}{30},            % 3D viewing angles (azimuth, elevation)
+    z buffer=sort,            % Ensures correct front-to-back rendering
     xlabel={Model},
     xlabel style={
         xshift = -40pt,
         yshift=40pt,
-        align=center        % optional alignment
+        align=center          % optional alignment
     },
     ylabel={Author set size},
     ylabel style={
         xshift = 25pt,
         yshift=20pt,
-        align=center        % optional alignment
+        align=center          % optional alignment
     },
     zlabel={Metric (\%)},
     width=14cm,
@@ -78,18 +79,18 @@ Methods
     xtick={1,2,3,4},
     xticklabels={RF (TF-IDF), BERT (source code), BERT (AST pre\_order), AttentionNN},
     xticklabel style={
-        font=\footnotesize,   % or \footnotesize, \tiny, etc.
+        font=\footnotesize,    % or \footnotesize, \tiny, etc.
         xshift = -20pt,
         yshift=10pt,
-        align=center        % optional alignment
+        align=center          % optional alignment
     },
-    ytick={1,2,3,4},
-    yticklabels={3 (min. count 58), 11 (min. count 50), 27 (min. count 40), 110 (min. count 25)},
+    ytick={4,3,2,1}, % Reversed ytick values
+    yticklabels={3 (min. count 58), 11 (min. count 50), 27 (min. count 40), 110 (min. count 25)}, % Corresponding reversed labels
     yticklabel style={
-        font=\footnotesize,   % or \footnotesize, \tiny, etc.
+        font=\footnotesize,    % or \footnotesize, \tiny, etc.
         xshift = 25pt,
         yshift=5pt,
-        align=center        % optional alignment
+        align=center          % optional alignment
     },
     zmin=0, zmax=100,
     grid=major,
@@ -104,12 +105,12 @@ Methods
 % MODEL 1: RF (x = 1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\addplot3+[ybar, bar width=12pt, fill=blue, draw=none, bar shift=-0.2] 
-    coordinates {(1.1,1,85.84) (1,2,80.56) (1,3,70.60) (1,4,66.24)};
-\addplot3+[ybar, bar width=12pt, fill=red, draw=none, bar shift=0]  
-    coordinates {(1.1,1,89.36) (1,2,84.56) (1,3,79.27) (1,4,71.73)};
-\addplot3+[ybar, bar width=12pt, fill=brown, draw=none, bar shift=+0.2] 
-    coordinates {(1.1,1,84.96) (1,2,72.03) (1,3,69.73) (1,4,65.55)};
+\addplot3+[ybar, bar width=12pt, fill=blue, draw=none, bar shift=-0.2]
+    coordinates {(1.1,4,85.84) (1,3,80.56) (1,2,70.60) (1,1,66.24)}; % Coordinates are adjusted to match the reversed ytick
+\addplot3+[ybar, bar width=12pt, fill=red, draw=none, bar shift=0]
+    coordinates {(1.1,4,89.36) (1,3,84.56) (1,2,79.27) (1,1,71.73)}; % Coordinates are adjusted to match the reversed ytick
+\addplot3+[ybar, bar width=12pt, fill=brown, draw=none, bar shift=+0.2]
+    coordinates {(1.1,4,84.96) (1,3,72.03) (1,2,69.73) (1,1,65.55)}; % Coordinates are adjusted to match the reversed ytick
 
 \addplot3+[
     mark=none,
@@ -126,19 +127,19 @@ Methods
         yshift=0pt
     }
 ] coordinates {
-    (0.8,1,85.84) (0.8,2,80.56) (0.8,3,70.60) (0.8,4,66.24)
+    (0.8,4,85.84) (0.8,3,80.56) (0.8,2,70.60) (0.8,1,66.24) % Coordinates are adjusted to match the reversed ytick
 };
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MODEL 2: BERT-SOURCE (x = 2)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\addplot3+[ybar, bar width=12pt, fill=blue, draw=none, bar shift=-0.2] 
-    coordinates {(2,1,90.70) (2,2,89.84) (2,3,82.72) (2,4,72.47)};
-\addplot3+[ybar, bar width=12pt, fill=red, draw=none, bar shift=0]  
-    coordinates {(2,1,93.33) (2,2,90.33) (2,3,84.66) (2,4,76.69)};
-\addplot3+[ybar, bar width=12pt, fill=brown, draw=none, bar shift=+0.2] 
-    coordinates {(2,1,91.67) (2,2,89.92) (2,3,82.25) (2,4,71.76)};
+\addplot3+[ybar, bar width=12pt, fill=blue, draw=none, bar shift=-0.2]
+    coordinates {(2,4,90.70) (2,3,89.84) (2,2,82.72) (2,1,72.47)}; % Coordinates are adjusted to match the reversed ytick
+\addplot3+[ybar, bar width=12pt, fill=red, draw=none, bar shift=0]
+    coordinates {(2,4,93.33) (2,3,90.33) (2,2,84.66) (2,1,76.69)}; % Coordinates are adjusted to match the reversed ytick
+\addplot3+[ybar, bar width=12pt, fill=brown, draw=none, bar shift=+0.2]
+    coordinates {(2,4,91.67) (2,3,89.92) (2,2,82.25) (2,1,71.76)}; % Coordinates are adjusted to match the reversed ytick
 
 \addplot3+[
     mark=none,
@@ -155,19 +156,19 @@ Methods
         yshift=0pt
     }
 ] coordinates {
-    (1.8,1,90.70) (1.8,2,89.84) (1.8,3,82.72) (1.8,4,72.47)
+    (1.8,4,90.70) (1.8,3,89.84) (1.8,2,82.72) (1.8,1,72.47) % Coordinates are adjusted to match the reversed ytick
 };
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MODEL 3: BERT-AST (x = 3)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\addplot3+[ybar, bar width=12pt, fill=blue, draw=none, bar shift=-0.2] 
-    coordinates {(3,1,83.72) (3,2,40.62) (3,3,35.66) (3,4,24.07)};
-\addplot3+[ybar, bar width=12pt, fill=red, draw=none, bar shift=0]  
-    coordinates {(3,1,84.72) (3,2,40.53) (3,3,36.41) (3,4,27.40)};
-\addplot3+[ybar, bar width=12pt, fill=brown, draw=none, bar shift=+0.2] 
-    coordinates {(3,1,82.58) (3,2,38.30) (3,3,33.93) (3,4,23.33)};
+\addplot3+[ybar, bar width=12pt, fill=blue, draw=none, bar shift=-0.2]
+    coordinates {(3,4,83.72) (3,3,40.62) (3,2,35.66) (3,1,24.07)}; % Coordinates are adjusted to match the reversed ytick
+\addplot3+[ybar, bar width=12pt, fill=red, draw=none, bar shift=0]
+    coordinates {(3,4,84.72) (3,3,40.53) (3,2,36.41) (3,1,27.40)}; % Coordinates are adjusted to match the reversed ytick
+\addplot3+[ybar, bar width=12pt, fill=brown, draw=none, bar shift=+0.2]
+    coordinates {(3,4,82.58) (3,3,38.30) (3,2,33.93) (3,1,23.33)}; % Coordinates are adjusted to match the reversed ytick
 
 \addplot3+[
     mark=none,
@@ -184,7 +185,7 @@ Methods
         yshift=0pt
     }
 ] coordinates {
-    (2.8,1,83.72) (2.8,2,40.62) (2.8,3,35.66) (2.8,4,24.07)
+    (2.8,4,83.72) (2.8,3,40.62) (2.8,2,35.66) (2.8,1,24.07) % Coordinates are adjusted to match the reversed ytick
 };
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

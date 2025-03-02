@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  2 MAR 2025 11:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  2 MAR 2025 11:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -641,9 +641,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 38.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 235.
+(Font)              <10> on input line 236.
 
-Overfull \hbox (10.18323pt too wide) in paragraph at lines 236--237
+Overfull \hbox (5.58405pt too wide) in paragraph at lines 237--238
  [][] 
  []
 
@@ -653,7 +653,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <example-image.pdf, id=27, 321.2pt x 240.9pt>
 File: example-image.pdf Graphic file (type pdf)
 <use example-image.pdf>
-Package pdftex.def Info: example-image.pdf  used on input line 247.
+Package pdftex.def Info: example-image.pdf  used on input line 248.
 (pdftex.def)             Requested size: 234.8775pt x 176.16429pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -677,7 +677,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,19n,107p,771b,2422s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss17.pfb>
-Output written on article.pdf (2 pages, 248433 bytes).
+Output written on article.pdf (2 pages, 248446 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
