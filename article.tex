@@ -112,6 +112,7 @@ Methods
 \addplot3+[ybar, bar width=12pt, fill=brown, draw=none, bar shift=+0.2]
     coordinates {(1.1,4,84.96) (1,3,72.03) (1,2,69.73) (1,1,65.55)}; % Coordinates are adjusted to match the reversed ytick
 
+    %dotted line
 \addplot3+[
     mark=none,
     blue,
@@ -169,24 +170,29 @@ Methods
     coordinates {(3,4,84.72) (3,3,40.53) (3,2,36.41) (3,1,27.40)}; % Coordinates are adjusted to match the reversed ytick
 \addplot3+[ybar, bar width=12pt, fill=brown, draw=none, bar shift=+0.2]
     coordinates {(3,4,82.58) (3,3,38.30) (3,2,33.93) (3,1,23.33)}; % Coordinates are adjusted to match the reversed ytick
-
-\addplot3+[
-    mark=none,
-    blue,
-    dotted,
-    line width=1pt,
-    nodes near coords,
-    every node near coord/.append style={
+\foreach \yA/\zA/\yB/\zB in {
+    4/83.72/3/40.62,
+    3/40.62/2/35.66,
+    2/35.66/1/24.07
+} {
+    \addplot3+[
         mark=none,
-        fill=none,
-        draw=none,
-        text=black,
-        font=\scriptsize,
-        yshift=0pt
-    }
-] coordinates {
-    (2.8,4,83.72) (2.8,3,40.62) (2.8,2,35.66) (2.8,1,24.07) % Coordinates are adjusted to match the reversed ytick
-};
+        blue,
+        dotted,
+        line width=1pt,
+        nodes near coords,
+        every node near coord/.append style={
+            mark=none,
+            fill=none,
+            draw=none,
+            text=black,
+            font=\scriptsize,
+            yshift=0pt
+        }
+    ] coordinates {
+        (3,\yA,\zA) (3,\yB,\zB)
+    };
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MODEL 4: ATTENTION-NN (x = 4) - Data missing => set to 0
@@ -239,15 +245,9 @@ Methods
 \label{fig:3d-bars-legend-brown}
 \end{figure}
 
-
 \section{Discussion}
 Here we discuss the implications of our results. 
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\textwidth]{example-image} % Uses the default dummy image provided by the graphicx package
-\caption{A sample figure using the default example image.}
-\end{figure}
 
 \section{Conclusion}
 We conclude that this document compiles successfully. If you can read all sections, view the figure, and see the mathematical expressions, your LaTeX environment is correctly set up.

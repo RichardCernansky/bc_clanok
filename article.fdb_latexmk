@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1740913092.33514 "/Users/richardcernansky/Desktop/bc_article/article.tex" "article.pdf" "article" 1740913093.74988 0
-  "/Users/richardcernansky/Desktop/bc_article/article.tex" 1740913092.14387 8590 d103cdf2f1b79e4417a11c195f321e4a ""
+["pdflatex"] 1740920049.20705 "/Users/richardcernansky/Desktop/bc_article/article.tex" "article.pdf" "article" 1740920050.46827 0
+  "/Users/richardcernansky/Desktop/bc_article/article.tex" 1740920049.00046 8466 43690aab33c4b369eca889223a18f6d0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1202520719 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -48,7 +48,6 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb" 1255129361 119752 1bd8d06e4079df624bf59ce3ad7c9aa6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb" 1255129361 121145 68312a933e2c689ed40ec0aba373e279 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb" 1255129361 122174 a7a08406857c9530a0320a2517f60370 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss17.pfb" 1255129361 97155 77b0a2ea02ee9c950117adae5f41f9c9 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -201,8 +200,6 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd" 1616454256 568 a5494d810f2680caf10205cd1226c76c ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd" 1616454256 1882 28c08db1407ebff35a658fd141753d16 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmr.fd" 1616454256 1867 996fe743d88a01aca041ed22cc10e1bb ""
-  "/usr/local/texlive/2024/texmf-dist/tex/latex/mwe/example-image.pdf" 1522444699 17568 8e23b7d568553840c1e0d1200fbe2c18 ""
-  "/usr/local/texlive/2024/texmf-dist/tex/latex/mwe/example-image.tex" 1336516272 472 ad3eb26372aefe8d1055d70eab56d506 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1601326656 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1673816307 373 00b204b1d7d095b892ad31a7494b0373 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1601326656 21013 f4ff83d25bb56552493b030f27c075ae ""
@@ -222,9 +219,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1733312353.91201 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733312303 8221429 ac6dbdced22ee8dfacda136694b71f0f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "article.aux" 1740913093.64743 1700 597cf264b0ec6944797e0dc63509f361 "pdflatex"
-  "article.out" 1740913093.64795 445 d8cdbe15c5edce9238fdfb6d9f079726 "pdflatex"
-  "article.tex" 1740913092.14387 8590 d103cdf2f1b79e4417a11c195f321e4a ""
+  "article.aux" 1740920050.37259 1541 c734a637b6d8e58213f1765fd70fb6a4 "pdflatex"
+  "article.out" 1740920050.37305 445 d8cdbe15c5edce9238fdfb6d9f079726 "pdflatex"
+  "article.tex" 1740920049.00046 8466 43690aab33c4b369eca889223a18f6d0 ""
   (generated)
   "article.aux"
   "article.log"
