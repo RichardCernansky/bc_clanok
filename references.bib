@@ -1,0 +1,112 @@
+@Article{information,
+AUTHOR = {He, Xie and Lashkari, Arash Habibi and Vombatkere, Nikhill and Sharma, Dilli Prasad},
+TITLE = {Authorship Attribution Methods, Challenges, and Future Research Directions: A Comprehensive Survey},
+JOURNAL = {Information},
+VOLUME = {15},
+YEAR = {2024},
+NUMBER = {3},
+ARTICLE-NUMBER = {131},
+URL = {https://www.mdpi.com/2078-2489/15/3/131},
+ISSN = {2078-2489},
+ABSTRACT = {Over the past few decades, researchers have put their effort and paid significant attention to the authorship attribution field, as it plays an important role in software forensics analysis, plagiarism detection, security attack detection, and protection of trade secrets, patent claims, copyright infringement, or cases of software theft. It helps new researchers understand the state-of-the-art works on authorship attribution methods, identify and examine the emerging methods for authorship attribution, and discuss their key concepts, associated challenges, and potential future work that could help newcomers in this field. This paper comprehensively surveys authorship attribution methods and their key classifications, used feature types, available datasets, model evaluation criteria and metrics, and challenges and limitations. In addition, we discuss the potential future research directions of the authorship attribution field based on the insights and lessons learned from this survey work.},
+DOI = {10.3390/info15030131}
+}
+
+@misc{sun2023AST,
+      title={Abstract Syntax Tree for Programming Language Understanding and Representation: How Far Are We?}, 
+      author={Weisong Sun and Chunrong Fang and Yun Miao and Yudu You and Mengzhe Yuan and Yuchen Chen and Quanjun Zhang and An Guo and Xiang Chen and Yang Liu and Zhenyu Chen},
+      year={2023},
+      eprint={2312.00413},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2312.00413}, 
+}
+
+@misc{codebert,
+      title={GraphCodeBERT: Pre-training Code Representations with Data Flow}, 
+      author={Daya Guo and Shuo Ren and Shuai Lu and Zhangyin Feng and Duyu Tang and Shujie Liu and Long Zhou and Nan Duan and Alexey Svyatkovskiy and Shengyu Fu and Michele Tufano and Shao Kun Deng and Colin Clement and Dawn Drain and Neel Sundaresan and Jian Yin and Daxin Jiang and Ming Zhou},
+      year={2021},
+      eprint={2009.08366},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2009.08366}, 
+}
+
+@article{code2vec,
+author = {Alon, Uri and Zilberstein, Meital and Levy, Omer and Yahav, Eran},
+title = {code2vec: learning distributed representations of code},
+year = {2019},
+issue_date = {January 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {3},
+number = {POPL},
+url = {https://doi.org/10.1145/3290353},
+doi = {10.1145/3290353},
+abstract = {We present a neural model for representing snippets of code as continuous distributed vectors (``code embeddings''). The main idea is to represent a code snippet as a single fixed-length code vector, which can be used to predict semantic properties of the snippet. To this end, code is first decomposed to a collection of paths in its abstract syntax tree. Then, the network learns the atomic representation of each path while simultaneously learning how to aggregate a set of them.  We demonstrate the effectiveness of our approach by using it to predict a method's name from the vector representation of its body. We evaluate our approach by training a model on a dataset of 12M methods. We show that code vectors trained on this dataset can predict method names from files that were unobserved during training. Furthermore, we show that our model learns useful method name vectors that capture semantic similarities, combinations, and analogies.  A comparison of our approach to previous techniques over the same dataset shows an improvement of more than 75\%, making it the first to successfully predict method names based on a large, cross-project corpus. Our trained model, visualizations and vector similarities are available as an interactive online demo at http://code2vec.org. The code, data and trained models are available at https://github.com/tech-srl/code2vec.},
+journal = {Proc. ACM Program. Lang.},
+month = jan,
+articleno = {40},
+numpages = {29},
+keywords = {Big Code, Distributed Representations, Machine Learning}
+}
+
+@INPROCEEDINGS{halstead,
+  author={Hariprasad, T and Vidhyagaran, G and Seenu, K and Thirumalai, Chandrasegar},
+  booktitle={2017 International Conference on Trends in Electronics and Informatics (ICEI)}, 
+  title={Software complexity analysis using halstead metrics}, 
+  year={2017},
+  volume={},
+  number={},
+  pages={1109-1113},
+  keywords={Programming;Complexity theory;Volume measurement;Software;Correlation;Conferences;Software Complexity;Halstead Metrics},
+  doi={10.1109/ICOEI.2017.8300883}}
+
+
+@inproceedings{compiler_based,
+author = {Brauckmann, Alexander and Goens, Andr\'{e}s and Ertel, Sebastian and Castrillon, Jeronimo},
+title = {Compiler-based graph representations for deep learning models of code},
+year = {2020},
+isbn = {9781450371209},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3377555.3377894},
+doi = {10.1145/3377555.3377894},
+abstract = {In natural language processing, novel methods in deep learning, like recurrent neural networks (RNNs) on sequences of words, have been very successful. In contrast to natural languages, programming languages usually have a well-defined structure. With this structure compilers can reason about programs, using graphs such as abstract syntax trees (ASTs) or control-data flow graphs (CDFGs). In this paper, we argue that we should use these graph structures instead of sequences for learning compiler optimization tasks. To this end, we use graph neural networks (GNNs) for learning predictive compiler tasks on two representations based on ASTs and CDFGs. Experiments show that this improves upon the state-of-the-art in the task of heterogeneous OpenCL mapping, while providing orders of magnitude faster inference times, crucial for compiler optimizations. When testing on benchmark suites not included for training, our AST-based model significantly outperforms the state-of-the-art by over 12 percentage points in terms of accuracy. It is the only one to perform clearly better than a random mapping. On the task of predicting thread coarsening factors, we show that all of the methods fail to produce an overall speedup.},
+booktitle = {Proceedings of the 29th International Conference on Compiler Construction},
+pages = {201–211},
+numpages = {11},
+keywords = {LLVM, Graphs, Deep Learning, Compilers},
+location = {San Diego, CA, USA},
+series = {CC 2020}
+}
+
+
+@misc{gcj,
+  author = {Ing. Juraj Petrik},
+  title = {Function name classifier},
+  year = {2024},
+  howpublished = {\url{https://github.com/Jur1cek/gcj-dataset}},
+  note = {Accessed: June 15, 2024}
+}
+
+
+@article{psychec,
+author = {Melo, Leandro T. C. and Ribeiro, Rodrigo G. and Guimar\~{a}es, Breno C. F. and Pereira, Fernando Magno Quint\~{a}o},
+title = {Type Inference for C: Applications to the Static Analysis of Incomplete Programs},
+year = {2020},
+issue_date = {September 2020},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {42},
+number = {3},
+issn = {0164-0925},
+url = {https://doi.org/10.1145/3421472},
+doi = {10.1145/3421472},
+abstract = {Type inference is a feature that is common to a variety of programming languages. While, in the past, it has been prominently present in functional ones (e.g., ML and Haskell), today, many object-oriented/multi-paradigm languages such as C# and C++ offer, to a certain extent, such a feature. Nevertheless, type inference still is an unexplored subject in the realm of C. In particular, it remains open whether it is possible to devise a technique that encompasses the idiosyncrasies of this language. The first difficulty encountered when tackling this problem is that parsing C requires, not only syntactic, but also semantic information. Yet, greater challenges emerge due to C’s intricate type system. In this work, we present a unification-based framework that lets us infer the missing struct, union, enum, and typedef declarations in a program.As an application of our technique, we investigate the reconstruction of partial programs. Incomplete source code naturally appears in software development: during design and while evolving, testing, and analyzing programs; therefore, understanding it is a valuable asset. With a reconstructed well-typed program, one can: (i) enable static analysis tools in scenarios where components are absent; (ii) improve precision of “zero setup” static analysis tools; (iii) apply stub generators, symbolic executors, and testing tools on code snippets; and (iv) provide engineers with an assortment of compilable benchmarks for performance and correctness validation. We evaluate our technique on code from a variety of C libraries, including GNU’s Coreutils and on snippets from popular projects such as CPython, FreeBSD, and Git.},
+journal = {ACM Trans. Program. Lang. Syst.},
+month = nov,
+articleno = {15},
+numpages = {71},
+keywords = {C language, Partial programs, parsing, type inference}
+}

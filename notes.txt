@@ -1,0 +1,22 @@
+- overfit got smaller with reducing the number of authors and size of dataset
+- conf matrix of rf ts 27 - its not good at capturing complex relationships that lead to misclassifiyng 
+- compare the training times and evaluate who's is the best
+- compare 
+
+
+-top 5 predicted names for every model and what the top five most frequent is
+- not biased in terms of length but are in Halstead complexity scaled by the number of misclassifications (different model accuracies)
+- ann handles more complex function better, but is easier to overfit compared to bert, but is much faster to train
+
+figures:
+distr_lens, names,
+bert_learning_curve, ann_learning_curve,
+misclass_h, misclass_l,
+conf_matrix_accuracy_bins,
+ann_accuracy_bins
+
+
+-Introduction
+-concepts explanation
+- function complexity
+- benefits of auth attr - we perform without comments

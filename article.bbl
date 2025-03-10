@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{code2vec}
+Uri Alon, Meital Zilberstein, Omer Levy, and Eran Yahav.
+\newblock code2vec: learning distributed representations of code.
+\newblock {\em Proc. ACM Program. Lang.}, 3(POPL), January 2019.
+
+\bibitem{compiler_based}
+Alexander Brauckmann, Andr\'{e}s Goens, Sebastian Ertel, and Jeronimo Castrillon.
+\newblock Compiler-based graph representations for deep learning models of code.
+\newblock In {\em Proceedings of the 29th International Conference on Compiler Construction}, CC 2020, page 201–211, New York, NY, USA, 2020. Association for Computing Machinery.
+
+\bibitem{codebert}
+Daya Guo, Shuo Ren, Shuai Lu, Zhangyin Feng, Duyu Tang, Shujie Liu, Long Zhou, Nan Duan, Alexey Svyatkovskiy, Shengyu Fu, Michele Tufano, Shao~Kun Deng, Colin Clement, Dawn Drain, Neel Sundaresan, Jian Yin, Daxin Jiang, and Ming Zhou.
+\newblock Graphcodebert: Pre-training code representations with data flow, 2021.
+
+\bibitem{halstead}
+T~Hariprasad, G~Vidhyagaran, K~Seenu, and Chandrasegar Thirumalai.
+\newblock Software complexity analysis using halstead metrics.
+\newblock In {\em 2017 International Conference on Trends in Electronics and Informatics (ICEI)}, pages 1109--1113, 2017.
+
+\bibitem{information}
+Xie He, Arash~Habibi Lashkari, Nikhill Vombatkere, and Dilli~Prasad Sharma.
+\newblock Authorship attribution methods, challenges, and future research directions: A comprehensive survey.
+\newblock {\em Information}, 15(3), 2024.
+
+\bibitem{psychec}
+Leandro T.~C. Melo, Rodrigo~G. Ribeiro, Breno C.~F. Guimar\~{a}es, and Fernando Magno Quint\~{a}o Pereira.
+\newblock Type inference for c: Applications to the static analysis of incomplete programs.
+\newblock {\em ACM Trans. Program. Lang. Syst.}, 42(3), November 2020.
+
+\bibitem{gcj}
+Ing.~Juraj Petrik.
+\newblock Function name classifier.
+\newblock \url{https://github.com/Jur1cek/gcj-dataset}, 2024.
+\newblock Accessed: June 15, 2024.
+
+\bibitem{sun2023AST}
+Weisong Sun, Chunrong Fang, Yun Miao, Yudu You, Mengzhe Yuan, Yuchen Chen, Quanjun Zhang, An~Guo, Xiang Chen, Yang Liu, and Zhenyu Chen.
+\newblock Abstract syntax tree for programming language understanding and representation: How far are we?, 2023.
+
+\end{thebibliography}
