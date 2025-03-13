@@ -1,8 +1,8 @@
-PWD /Users/richardcernansky/Desktop/ieee/IEEE-conference-template-062824/myIEEE
+PWD /Users/richardcernansky/Desktop/bc_article/myIEEE
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/richardcernansky/Desktop/ieee/IEEE-conference-template-062824/myIEEE/article.tex
+INPUT /Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex
 OUTPUT article.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ieeetran/IEEEtran.cls

@@ -171,7 +171,7 @@ For training the models, a prediction task data pipeline was constructed as foll
 
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=2.5cm,height=3.5cm]{figures/high_level_prediciton_task.png}
+    \includegraphics[width=3.5cm,height=5cm]{figures/high_level_prediciton_task.png}
     \caption{\cite{compiler_based} High-level overview of the function classification prediction task.}
     \label{fig:predictive_task}
 \end{figure}
@@ -411,15 +411,7 @@ Furthermore, we assessed the AttentionNN model’s performance based on function
 
 A 3D bar chart (Figure~\ref{fig:3d-bars}) further visualizes Accuracy, Precision, and Recall across models and author set sizes. (The code for this chart uses TikZ and pgfplots.)
 
-\section{Discussion}
-
-Our findings indicate that deep learning models—especially BERT trained on raw source code—consistently outperform traditional methods like Random Forests in terms of accuracy, albeit at the expense of longer training times. Random Forests, despite their simplicity and efficiency, lag behind in accuracy when compared to BERT. Meanwhile, AttentionNN benefits from capturing structural complexity but tends to overfit with limited data. These results highlight the trade-offs between model complexity, training time, and overall performance. Future work might explore hybrid approaches (e.g., combining BERT embeddings with Random Forest classifiers) and improved regularization to balance accuracy and computational efficiency.
-
-\section{Conclusion}
-
-This study compared traditional machine learning models and deep learning approaches for authorship attribution of individual functions. While BERT-based models achieved state-of-the-art accuracy, they required significantly longer training times and computational resources compared to Random Forests. The choice of input representation (raw source code tokens versus AST-based traversal) greatly influenced performance. In resource-constrained environments, simpler models like Random Forests remain a viable option, whereas applications demanding higher accuracy may favor deep learning models despite their overhead. Future research could investigate hybrid models and advanced regularization techniques to further improve generalization.
-
-\begin{figure}[!b]
+\begin{figure}[!t]
     \centering
     % Scale to the column width (100%)
     \includegraphics[width=\columnwidth]{figures/conf_matrix_sourcode_bert_ts27.pdf}
@@ -427,16 +419,46 @@ This study compared traditional machine learning models and deep learning approa
     \label{fig:conf_matrix_bert}
 \end{figure}
 
+\section{Discussion}
+
+Our findings show that deep learning models, especially BERT, perform better than traditional machine learning methods for authorship attribution 
+of single functions. But this comes at a cost—BERT needs way more computation and training time. On the other hand, Random Forest with TF-IDF 
+tokenization held up surprisingly well, especially with larger author sets, and trained very fast.
+
+A key takeaway is that BERT trained on raw source code tokens consistently had the best accuracy across all dataset sizes. However, 
+its improvement from \texttt{set\_size=11} to \texttt{set\_size=3} was only 0.86\%, meaning increasing the minimum function count per author 
+after a certain point doesn’t do much. Interestingly, BERT using AST pre-order traversal struggled with large author sets but got way better 
+when we reduced the dataset to three authors. This shows how important it is to choose the right input representation for deep learning models.
+
+Looking at misclassifications, each model had its weak points. BERT had trouble with short functions that had low Halstead complexity— they 
+don’t provide enough meaningful context to determine the author. Random Forests, which rely more on statistical patterns than contextual 
+understanding, started failing as function complexity increased. This makes sense since TF-IDF representations capture token frequency but 
+don’t really understand code structure.
+
+AttentionNN, which works with AST-derived node-to-node paths, preferred structurally complex functions over simple ones. This means that 
+networks using structural information may do better with more complex functions rather than short, flat ones. However, AttentionNN didn’t 
+generalize well when data was limited, and it started overfitting when trained on small author sets. This shows we either need bigger 
+datasets or more regularization to prevent overfitting.
+
+The results highlight a clear trade-off between model complexity, training time, and accuracy. Deep learning models, while powerful, 
+require serious computational resources, making them harder to scale in real-world use cases. Random Forests might not be as accurate, 
+but they’re super efficient and a solid alternative when speed is a concern.
+
+Going forward, it would be interesting to combine these methods. For example a hybrid approach using BERT embeddings with Random Forest 
+classifier could balance accuracy and efficiency. Also, using graph-based neural networks to process ASTs more effectively might push 
+authorship attribution even further. Exploring data augmentation techniques or better regularization strategies could also help deep 
+learning models generalize better, especially with AST-based inputs.
+
 \begin{figure}[!b]
     \centering
-    \begin{subfigure}{0.48\textwidth} 
+    \begin{subfigure}{\columnwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/attention_nn/ann_acc_num_nodes.pdf}
         \caption{Accuracy vs. number of AST nodes}
         \label{fig:ann_acc_nodes}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.48\textwidth}
+    \begin{subfigure}{\columnwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/attention_nn/ann_acc_depth.pdf}
         \caption{Accuracy vs. AST depth}
@@ -446,7 +468,44 @@ This study compared traditional machine learning models and deep learning approa
     \label{fig:ann_acc}
 \end{figure}
 
-\bibliographystyle{IEEEtran}
-\bibliography{references}
+
+\section{Conclusion}
+
+In this study, we compared traditional machine learning models and deep learning models for authorship attribution of individual functions. 
+Our results showed that while BERT-based models provided the highest accuracy, they required significantly longer training times and 
+computational resources. In contrast, Random Forests trained on TF-IDF representations performed surprisingly well given their simplicity 
+and efficiency.
+
+The choice of model largely depends on the trade-off between accuracy and efficiency. If the goal is purely high accuracy and computational 
+resources aren’t a constraint, then BERT trained on tokenized source code is the best option. However, if speed and efficiency are more 
+important, Random Forests provide a strong alternative with competitive accuracy.
+
+We also found that different function representations significantly affect model performance. BERT struggled with AST-based pre-order 
+traversal when the number of authors was high. 
+
+AttentionNN performed better on more structurally complex functions rather than shorter ones. This highlights the need for 
+careful feature selection capturing the complex relationships when applying deep learning to authorship attribution.
+
+Overall, this study demonstrates that while deep learning methods achieve state-of-the-art performance, traditional 
+machine learning approaches still hold value, especially in resource-constrained environments.
+
+
+
+\begin{thebibliography}{00}
+    \bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
+    \bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
+    \bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
+    \bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
+    \bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
+    \bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
+    \bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+    \bibitem{b8} D. P. Kingma and M. Welling, ``Auto-encoding variational Bayes,'' 2013, arXiv:1312.6114. [Online]. Available: https://arxiv.org/abs/1312.6114
+    \bibitem{b9} S. Liu, ``Wi-Fi Energy Detection Testbed (12MTC),'' 2023, gitHub repository. [Online]. Available: https://github.com/liustone99/Wi-Fi-Energy-Detection-Testbed-12MTC
+    \bibitem{b10} ``Treatment episode data set: discharges (TEDS-D): concatenated, 2006 to 2009.'' U.S. Department of Health and Human Services, Substance Abuse and Mental Health Services Administration, Office of Applied Studies, August, 2013, DOI:10.3886/ICPSR30122.v2
+    \bibitem{b11} K. Eves and J. Valasek, ``Adaptive control for singularly perturbed systems examples,'' Code Ocean, Aug. 2023. [Online]. Available: https://codeocean.com/capsule/4989235/tree
+    \end{thebibliography}
+
+
+
 
 \end{document}

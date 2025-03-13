@@ -1,14 +1,6 @@
 # Fdb version 4
-["bibtex article"] 0 "article.aux" "article.bbl" "article" 1741893257.01373 0
-  "/usr/local/texlive/2024/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "article.aux" 0 -1 0 "pdflatex"
-  "references.bib" 0 -1 0 ""
-  (generated)
-  "article.bbl"
-  "article.blg"
-  (rewritten before read)
-["pdflatex"] 1741893255.22032 "/Users/richardcernansky/Desktop/ieee/IEEE-conference-template-062824/myIEEE/article.tex" "article.pdf" "article" 1741893257.01387 0
-  "/Users/richardcernansky/Desktop/ieee/IEEE-conference-template-062824/myIEEE/article.tex" 1741893254.84696 25417 5445223ad04f74b8030f71aeb206fe04 ""
+["pdflatex"] 1741896979.79373 "/Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex" "article.pdf" "article" 1741896981.49176 0
+  "/Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex" 1741896979.60508 29995 1c903ff0ea613f6183ce0cab49bcca90 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -238,9 +230,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1733312353.91201 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733312303 8221429 ac6dbdced22ee8dfacda136694b71f0f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "article.aux" 1741893256.7258 4824 ebcb1c6e812943cb8cdf7e5276b05ec4 "pdflatex"
-  "article.bbl" 0 -1 0 "bibtex article"
-  "article.tex" 1741893254.84696 25417 5445223ad04f74b8030f71aeb206fe04 ""
+  "article.aux" 1741896981.40272 5046 fdada5760c1b47f5f220dcbad7e62d91 "pdflatex"
+  "article.tex" 1741896979.60508 29995 1c903ff0ea613f6183ce0cab49bcca90 ""
   "figures/attention_nn/ann_acc_depth.pdf" 1741886096.9327 25420 8e25fe5b07164dfc358b4da77bff9f74 ""
   "figures/attention_nn/ann_acc_num_nodes.pdf" 1741886096.93324 25799 4b2e9af2344fde0c1529fc9d3c1852f2 ""
   "figures/conf_matrix_sourcode_bert_ts27.pdf" 1741886096.95523 35371 8b680a779668eb4f92e8bc238a254a78 ""

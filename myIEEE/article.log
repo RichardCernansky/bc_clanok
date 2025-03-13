@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  13 MAR 2025 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  13 MAR 2025 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/richardcernansky/Desktop/ieee/IEEE-conference-template-062824/myIEEE/article.tex
-(/Users/richardcernansky/Desktop/ieee/IEEE-conference-template-062824/myIEEE/article.tex
+**/Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex
+(/Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
@@ -759,7 +759,7 @@ LaTeX Warning: Citation `halstead' on page 2 undefined on input line 165.
 File: figures/high_level_prediciton_task.png Graphic file (type png)
 <use figures/high_level_prediciton_task.png>
 Package pdftex.def Info: figures/high_level_prediciton_task.png  used on input line 174.
-(pdftex.def)             Requested size: 71.13072pt x 99.58328pt.
+(pdftex.def)             Requested size: 99.58302pt x 142.26558pt.
 
 LaTeX Warning: Citation `compiler_based' on page 2 undefined on input line 175.
 
@@ -819,24 +819,26 @@ Overfull \hbox (25.39923pt too wide) in paragraph at lines 405--406
  []| [] 
  []
 
-[4 <./figures/misclass_lens.pdf> <./figures/misclass_hs.png>]
-<figures/conf_matrix_sourcode_bert_ts27.pdf, id=257, 621.02425pt x 563.25868pt>
+<figures/conf_matrix_sourcode_bert_ts27.pdf, id=210, 621.02425pt x 563.25868pt>
 File: figures/conf_matrix_sourcode_bert_ts27.pdf Graphic file (type pdf)
 <use figures/conf_matrix_sourcode_bert_ts27.pdf>
-Package pdftex.def Info: figures/conf_matrix_sourcode_bert_ts27.pdf  used on input line 425.
+Package pdftex.def Info: figures/conf_matrix_sourcode_bert_ts27.pdf  used on input line 417.
 (pdftex.def)             Requested size: 252.0pt x 228.55684pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./figures/misclass_lens.pdf> <./figures/misclass_hs.png>]
 <figures/attention_nn/ann_acc_num_nodes.pdf, id=258, 867.24pt x 578.16pt>
 File: figures/attention_nn/ann_acc_num_nodes.pdf Graphic file (type pdf)
 <use figures/attention_nn/ann_acc_num_nodes.pdf>
-Package pdftex.def Info: figures/attention_nn/ann_acc_num_nodes.pdf  used on input line 434.
-(pdftex.def)             Requested size: 247.6778pt x 165.11255pt.
+Package pdftex.def Info: figures/attention_nn/ann_acc_num_nodes.pdf  used on input line 456.
+(pdftex.def)             Requested size: 252.0pt x 167.99733pt.
 <figures/attention_nn/ann_acc_depth.pdf, id=259, 867.24pt x 578.16pt>
 File: figures/attention_nn/ann_acc_depth.pdf Graphic file (type pdf)
 <use figures/attention_nn/ann_acc_depth.pdf>
-Package pdftex.def Info: figures/attention_nn/ann_acc_depth.pdf  used on input line 441.
-(pdftex.def)             Requested size: 247.6778pt x 165.11255pt.
-
-No file article.bbl.
+Package pdftex.def Info: figures/attention_nn/ann_acc_depth.pdf  used on input line 463.
+(pdftex.def)             Requested size: 252.0pt x 167.99733pt.
+ [5 <./figures/conf_matrix_sourcode_bert_ts27.pdf> <./figures/attention_nn/ann_acc_num_nodes.pdf> <./figures/attention_nn/ann_acc_depth.pdf>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -848,7 +850,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5 <./figures/conf_matrix_sourcode_bert_ts27.pdf> <./figures/attention_nn/ann_acc_num_nodes.pdf> <./figures/attention_nn/ann_acc_depth.pdf>] (./article.aux)
+[6
+
+] (./article.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -859,18 +863,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 41495 strings out of 474116
- 1046118 string characters out of 5743682
+ 41506 strings out of 474116
+ 1046126 string characters out of 5743682
  1963187 words of memory out of 5000000
- 63325 multiletter control sequences out of 15000+600000
+ 63336 multiletter control sequences out of 15000+600000
  600025 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 144i,19n,136p,1742b,2426s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 144i,19n,136p,1716b,2426s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on article.pdf (5 pages, 356122 bytes).
+Output written on article.pdf (6 pages, 361622 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 529 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
