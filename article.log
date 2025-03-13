@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  9 MAR 2025 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  13 MAR 2025 20:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -697,60 +697,60 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 12
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-<figures/high_level_prediciton_task.png, id=36, 196.735pt x 287.0725pt>
+<figures/high_level_prediciton_task.png, id=37, 196.735pt x 287.0725pt>
 File: figures/high_level_prediciton_task.png Graphic file (type png)
 <use figures/high_level_prediciton_task.png>
-Package pdftex.def Info: figures/high_level_prediciton_task.png  used on input line 182.
+Package pdftex.def Info: figures/high_level_prediciton_task.png  used on input line 162.
 (pdftex.def)             Requested size: 71.13072pt x 99.58328pt.
- [3 <./figures/high_level_prediciton_task.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 196.
+(Font)              <10> on input line 176.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 196.
+(Font)              <7> on input line 176.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 196.
-<figures/distribution_names.pdf, id=52, 1445.4pt x 578.16pt>
+(Font)              <5> on input line 176.
+<figures/distribution_names.pdf, id=42, 1445.4pt x 578.16pt>
 File: figures/distribution_names.pdf Graphic file (type pdf)
 <use figures/distribution_names.pdf>
-Package pdftex.def Info: figures/distribution_names.pdf  used on input line 206.
+Package pdftex.def Info: figures/distribution_names.pdf  used on input line 186.
 (pdftex.def)             Requested size: 225.4804pt x 90.1873pt.
-<figures/distr_lens_tokens.pdf, id=53, 867.24pt x 433.62pt>
+<figures/distr_lens_tokens.pdf, id=43, 867.24pt x 433.62pt>
 File: figures/distr_lens_tokens.pdf Graphic file (type pdf)
 <use figures/distr_lens_tokens.pdf>
-Package pdftex.def Info: figures/distr_lens_tokens.pdf  used on input line 213.
+Package pdftex.def Info: figures/distr_lens_tokens.pdf  used on input line 193.
 (pdftex.def)             Requested size: 225.4804pt x 112.73854pt.
- [4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./figures/distribution_names.pdf> <./figures/distr_lens_tokens.pdf>] [5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-<figures/conf_matrix_sourcode_bert_ts27.pdf, id=262, 621.02425pt x 563.25868pt>
+ [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./figures/high_level_prediciton_task.png>] [4 <./figures/distribution_names.pdf> <./figures/distr_lens_tokens.pdf>] [5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+<figures/conf_matrix_sourcode_bert_ts27.pdf, id=265, 621.02425pt x 563.25868pt>
 File: figures/conf_matrix_sourcode_bert_ts27.pdf Graphic file (type pdf)
 <use figures/conf_matrix_sourcode_bert_ts27.pdf>
-Package pdftex.def Info: figures/conf_matrix_sourcode_bert_ts27.pdf  used on input line 331.
+Package pdftex.def Info: figures/conf_matrix_sourcode_bert_ts27.pdf  used on input line 311.
 (pdftex.def)             Requested size: 281.85587pt x 255.6471pt.
- [6 <./figures/conf_matrix_sourcode_bert_ts27.pdf>]
-Overfull \hbox (5.58405pt too wide) in paragraph at lines 565--566
+
+Overfull \hbox (5.58405pt too wide) in paragraph at lines 545--546
  [][] 
  []
 
-<figures/misclass_lens.pdf, id=339, 722.7pt x 433.62pt>
+[6 <./figures/conf_matrix_sourcode_bert_ts27.pdf>]
+<figures/misclass_lens.pdf, id=340, 722.7pt x 433.62pt>
 File: figures/misclass_lens.pdf Graphic file (type pdf)
 <use figures/misclass_lens.pdf>
-Package pdftex.def Info: figures/misclass_lens.pdf  used on input line 588.
+Package pdftex.def Info: figures/misclass_lens.pdf  used on input line 568.
 (pdftex.def)             Requested size: 375.80544pt x 225.48369pt.
-[7]
+ [7]
 <figures/misclass_hs.png, id=351, 1073.00874pt x 617.30624pt>
 File: figures/misclass_hs.png Graphic file (type png)
 <use figures/misclass_hs.png>
-Package pdftex.def Info: figures/misclass_hs.png  used on input line 600.
+Package pdftex.def Info: figures/misclass_hs.png  used on input line 580.
 (pdftex.def)             Requested size: 375.80544pt x 216.2017pt.
  [8 <./figures/misclass_lens.pdf> <./figures/misclass_hs.png>]
 <figures/attention_nn/ann_acc_num_nodes.pdf, id=404, 867.24pt x 578.16pt>
 File: figures/attention_nn/ann_acc_num_nodes.pdf Graphic file (type pdf)
 <use figures/attention_nn/ann_acc_num_nodes.pdf>
-Package pdftex.def Info: figures/attention_nn/ann_acc_num_nodes.pdf  used on input line 623.
+Package pdftex.def Info: figures/attention_nn/ann_acc_num_nodes.pdf  used on input line 603.
 (pdftex.def)             Requested size: 225.4804pt x 150.31805pt.
 <figures/attention_nn/ann_acc_depth.pdf, id=405, 867.24pt x 578.16pt>
 File: figures/attention_nn/ann_acc_depth.pdf Graphic file (type pdf)
 <use figures/attention_nn/ann_acc_depth.pdf>
-Package pdftex.def Info: figures/attention_nn/ann_acc_depth.pdf  used on input line 630.
+Package pdftex.def Info: figures/attention_nn/ann_acc_depth.pdf  used on input line 610.
 (pdftex.def)             Requested size: 225.4804pt x 150.31805pt.
  [9 <./figures/attention_nn/ann_acc_num_nodes.pdf> <./figures/attention_nn/ann_acc_depth.pdf>] (./article.bbl [10]) [11] (./article.aux)
  ***********
@@ -763,15 +763,15 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33324 strings out of 474116
- 775661 string characters out of 5743682
- 1961187 words of memory out of 5000000
- 55096 multiletter control sequences out of 15000+600000
+ 33323 strings out of 474116
+ 775639 string characters out of 5743682
+ 1958187 words of memory out of 5000000
+ 55095 multiletter control sequences out of 15000+600000
  634200 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,19n,107p,913b,2451s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on article.pdf (11 pages, 598273 bytes).
+Output written on article.pdf (11 pages, 594864 bytes).
 PDF statistics:
  726 PDF objects out of 1000 (max. 8388607)
  278 compressed objects within 3 object streams

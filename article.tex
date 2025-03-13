@@ -132,26 +132,6 @@ int add(int a, int b) {
 \end{verbatim}
 
 The corresponding AST is structured as follows:
-\begin{verbatim}
-TranslationUnit
-|--FunctionDefinition `int add(int a, int b) {`
-   |--BasicTypeSpecifier `int`
-   |--FunctionDeclarator `add(`
-   |  |--IdentifierDeclarator `add`
-   |  |--ParameterSuffix `(int a, int b)`
-   |     |--ParameterDeclaration `int a`
-   |     |  |--BasicTypeSpecifier `int`
-   |     |  |--IdentifierDeclarator `a`
-   |     |--ParameterDeclaration `int b`
-   |        |--BasicTypeSpecifier `int`
-   |        |--IdentifierDeclarator `b`
-   |--CompoundStatement `{ return a + b; }`
-      |--ReturnStatement `return a + b;`
-         |--AddExpression `a + b`
-            |--IdentifierName `a`
-            |--IdentifierName `b`
-\end{verbatim}
-\label{verbatim:AST_example}
 
 \subsubsection{AST - types of features}
 
