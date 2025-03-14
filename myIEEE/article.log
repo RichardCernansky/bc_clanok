@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  13 MAR 2025 21:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  14 MAR 2025 11:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,23 +676,26 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count357
 \@vwid@loff=\dimen325
 \@vwid@roff=\dimen326
-)) (./article.aux)
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./article.aux)
 \openout1 = `article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 -- Lines per column: 56 (exact).
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -721,124 +724,101 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
 \c@lstlisting=\count364
-
-LaTeX Warning: Citation `gcj' on page 1 undefined on input line 73.
-
-
-LaTeX Warning: Citation `information' on page 1 undefined on input line 82.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 130.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 130.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
+Underfull \hbox (badness 4254) in paragraph at lines 144--149
+[]\OT1/ptm/b/n/10 Neural Net-works Gen-er-ated Rep-re-sen-ta-tions of
+ []
 
-LaTeX Warning: Citation `sun2023AST' on page 2 undefined on input line 96.
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 104.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 165.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 147.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 208.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <14> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
-
-
-LaTeX Warning: Citation `halstead' on page 2 undefined on input line 165.
-
-<figures/high_level_prediciton_task.png, id=14, 196.735pt x 287.0725pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 208.
+<figures/high_level_prediciton_task.png, id=13, 196.735pt x 287.0725pt>
 File: figures/high_level_prediciton_task.png Graphic file (type png)
 <use figures/high_level_prediciton_task.png>
-Package pdftex.def Info: figures/high_level_prediciton_task.png  used on input line 174.
+Package pdftex.def Info: figures/high_level_prediciton_task.png  used on input line 240.
 (pdftex.def)             Requested size: 99.58302pt x 142.26558pt.
-
-LaTeX Warning: Citation `compiler_based' on page 2 undefined on input line 175.
-
-
-LaTeX Warning: Citation `compiler_based' on page 2 undefined on input line 175.
-
-
-LaTeX Warning: Citation `psychec' on page 2 undefined on input line 186.
-
-<figures/distribution_names.pdf, id=16, 1445.4pt x 578.16pt>
+ [2]
+<figures/distribution_names.pdf, id=21, 1445.4pt x 578.16pt>
 File: figures/distribution_names.pdf Graphic file (type pdf)
 <use figures/distribution_names.pdf>
-Package pdftex.def Info: figures/distribution_names.pdf  used on input line 220.
+Package pdftex.def Info: figures/distribution_names.pdf  used on input line 306.
 (pdftex.def)             Requested size: 247.6778pt x 99.07104pt.
-<figures/distr_lens_tokens.pdf, id=17, 867.24pt x 433.62pt>
+<figures/distr_lens_tokens.pdf, id=22, 867.24pt x 433.62pt>
 File: figures/distr_lens_tokens.pdf Graphic file (type pdf)
 <use figures/distr_lens_tokens.pdf>
-Package pdftex.def Info: figures/distr_lens_tokens.pdf  used on input line 227.
+Package pdftex.def Info: figures/distr_lens_tokens.pdf  used on input line 313.
 (pdftex.def)             Requested size: 247.6778pt x 123.83441pt.
-[2 <./figures/high_level_prediciton_task.png>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 246.
-
-
-LaTeX Warning: Citation `codebert' on page 3 undefined on input line 256.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
-[]\OT1/ptm/m/n/10 For both BERT se-tups, Mi-crosoft's pre-trained
- []
-
-
-LaTeX Warning: Citation `code2vec' on page 3 undefined on input line 259.
-
-<figures/misclass_lens.pdf, id=25, 722.7pt x 433.62pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 340.
+ [3 <./figures/high_level_prediciton_task.png> <./figures/distribution_names.pdf> <./figures/distr_lens_tokens.pdf>] [4] [5]
+<figures/misclass_lens.pdf, id=214, 722.7pt x 433.62pt>
 File: figures/misclass_lens.pdf Graphic file (type pdf)
 <use figures/misclass_lens.pdf>
-Package pdftex.def Info: figures/misclass_lens.pdf  used on input line 391.
+Package pdftex.def Info: figures/misclass_lens.pdf  used on input line 578.
 (pdftex.def)             Requested size: 302.39923pt x 181.43765pt.
 
-Overfull \hbox (25.39923pt too wide) in paragraph at lines 391--392
+Overfull \hbox (25.39923pt too wide) in paragraph at lines 578--579
  []| [] 
  []
 
-[3 <./figures/distribution_names.pdf> <./figures/distr_lens_tokens.pdf>]
-Overfull \hbox (37.95003pt too wide) detected at line 399
-[][][] \OT1/cmr/m/n/10 = []
- []
-
-<figures/misclass_hs.png, id=209, 1073.00874pt x 617.30624pt>
+<figures/misclass_hs.png, id=215, 1073.00874pt x 617.30624pt>
 File: figures/misclass_hs.png Graphic file (type png)
 <use figures/misclass_hs.png>
-Package pdftex.def Info: figures/misclass_hs.png  used on input line 405.
+Package pdftex.def Info: figures/misclass_hs.png  used on input line 588.
 (pdftex.def)             Requested size: 302.39923pt x 173.96547pt.
 
-Overfull \hbox (25.39923pt too wide) in paragraph at lines 405--406
+Overfull \hbox (25.39923pt too wide) in paragraph at lines 588--589
  []| [] 
  []
 
-<figures/conf_matrix_sourcode_bert_ts27.pdf, id=210, 621.02425pt x 563.25868pt>
+<figures/conf_matrix_sourcode_bert_ts27.pdf, id=216, 621.02425pt x 563.25868pt>
 File: figures/conf_matrix_sourcode_bert_ts27.pdf Graphic file (type pdf)
 <use figures/conf_matrix_sourcode_bert_ts27.pdf>
-Package pdftex.def Info: figures/conf_matrix_sourcode_bert_ts27.pdf  used on input line 417.
+Package pdftex.def Info: figures/conf_matrix_sourcode_bert_ts27.pdf  used on input line 598.
 (pdftex.def)             Requested size: 252.0pt x 228.55684pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./figures/misclass_lens.pdf> <./figures/misclass_hs.png>]
-<figures/attention_nn/ann_acc_num_nodes.pdf, id=258, 867.24pt x 578.16pt>
+[6 <./figures/misclass_lens.pdf> <./figures/misclass_hs.png> <./figures/conf_matrix_sourcode_bert_ts27.pdf>]
+<figures/attention_nn/ann_acc_num_nodes.pdf, id=327, 867.24pt x 578.16pt>
 File: figures/attention_nn/ann_acc_num_nodes.pdf Graphic file (type pdf)
 <use figures/attention_nn/ann_acc_num_nodes.pdf>
-Package pdftex.def Info: figures/attention_nn/ann_acc_num_nodes.pdf  used on input line 456.
+Package pdftex.def Info: figures/attention_nn/ann_acc_num_nodes.pdf  used on input line 637.
 (pdftex.def)             Requested size: 252.0pt x 167.99733pt.
-<figures/attention_nn/ann_acc_depth.pdf, id=259, 867.24pt x 578.16pt>
+<figures/attention_nn/ann_acc_depth.pdf, id=328, 867.24pt x 578.16pt>
 File: figures/attention_nn/ann_acc_depth.pdf Graphic file (type pdf)
 <use figures/attention_nn/ann_acc_depth.pdf>
-Package pdftex.def Info: figures/attention_nn/ann_acc_depth.pdf  used on input line 463.
+Package pdftex.def Info: figures/attention_nn/ann_acc_depth.pdf  used on input line 644.
 (pdftex.def)             Requested size: 252.0pt x 167.99733pt.
- [5 <./figures/conf_matrix_sourcode_bert_ts27.pdf> <./figures/attention_nn/ann_acc_num_nodes.pdf> <./figures/attention_nn/ann_acc_depth.pdf>]
+
+Underfull \hbox (badness 2726) in paragraph at lines 680--681
+[]\OT1/ptm/m/n/8 W. Sun, C. Fang, Y. Miao, Y. You, M. Yuan, Y. Chen, Q.
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 707--708
+\OT1/ptm/m/n/8 i-tat-ing pro-gram-mer style: Ad-ver-saries in pro-gram au-thor-ship at-
+ []
+
+
+Underfull \hbox (badness 6758) in paragraph at lines 707--708
+\OT1/ptm/m/n/8 tri-bu-tion,'' in \OT1/ptm/m/it/8 Pro-ceed-ings on Pri-vacy En-hanc-ing Tech-nolo-gies
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -850,31 +830,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
-
-] (./article.aux)
+[7 <./figures/attention_nn/ann_acc_num_nodes.pdf> <./figures/attention_nn/ann_acc_depth.pdf>] (./article.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 41506 strings out of 474116
- 1046126 string characters out of 5743682
- 1963187 words of memory out of 5000000
- 63336 multiletter control sequences out of 15000+600000
- 600025 words of font info for 116 fonts, out of 8000000 for 9000
+ 41588 strings out of 474116
+ 1047391 string characters out of 5743682
+ 1967187 words of memory out of 5000000
+ 63412 multiletter control sequences out of 15000+600000
+ 602239 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 144i,19n,136p,1716b,2426s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 144i,19n,136p,1655b,2429s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on article.pdf (6 pages, 361622 bytes).
+Output written on article.pdf (7 pages, 371903 bytes).
 PDF statistics:
- 529 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
+ 534 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

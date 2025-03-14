@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1741896979.79373 "/Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex" "article.pdf" "article" 1741896981.49176 0
-  "/Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex" 1741896979.60508 29995 1c903ff0ea613f6183ce0cab49bcca90 ""
+["pdflatex"] 1741947574.24736 "/Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex" "article.pdf" "article" 1741947575.98571 0
+  "/Users/richardcernansky/Desktop/bc_article/myIEEE/article.tex" 1741947573.66759 41025 93d22a786dbf5f32c9eaa0454a849faa ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -223,6 +223,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1137110629 961 15056f4a61917ceed3a44e4ac11fcc52 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty" 1700689882 7500 db31c3d04f8bc9010e47a5efbbace9ff ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty" 1253232110 1380 971a51b00a14503ddf754cab24c3f209 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty" 1238697683 10894 d359a13923460b2a73d4312d613554c8 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty" 1700082560 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1655411236 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
@@ -230,8 +231,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1733312353.91201 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733312303 8221429 ac6dbdced22ee8dfacda136694b71f0f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "article.aux" 1741896981.40272 5046 fdada5760c1b47f5f220dcbad7e62d91 "pdflatex"
-  "article.tex" 1741896979.60508 29995 1c903ff0ea613f6183ce0cab49bcca90 ""
+  "article.aux" 1741947575.88908 5779 6c7ece76e5a0165155534b9ecc1123f1 "pdflatex"
+  "article.tex" 1741947573.66759 41025 93d22a786dbf5f32c9eaa0454a849faa ""
   "figures/attention_nn/ann_acc_depth.pdf" 1741886096.9327 25420 8e25fe5b07164dfc358b4da77bff9f74 ""
   "figures/attention_nn/ann_acc_num_nodes.pdf" 1741886096.93324 25799 4b2e9af2344fde0c1529fc9d3c1852f2 ""
   "figures/conf_matrix_sourcode_bert_ts27.pdf" 1741886096.95523 35371 8b680a779668eb4f92e8bc238a254a78 ""

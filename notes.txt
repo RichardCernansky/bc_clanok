@@ -20,3 +20,6 @@ ann_accuracy_bins
 -concepts explanation
 - function complexity
 - benefits of auth attr - we perform without comments
+
+- pridat aku kartu sme pouzili
+pridat - sizes datasetov
