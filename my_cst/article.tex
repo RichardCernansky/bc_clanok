@@ -1,15 +1,12 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 
-% Required packages for IEEEtran
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
-
-% Additional packages from your article (ensuring they do not interfere with IEEE margins)
 \usepackage{subcaption}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.17}
@@ -19,30 +16,31 @@
 \usepackage[edges]{forest}
 \usepackage{adjustbox}
 \usepackage{url}
+\usepackage{float}
 
-
-% Do not load geometry or bookmark in IEEEtran
-%\usepackage{geometry}
-%\usepackage{bookmark}
-
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
 \begin{document}
 
-\title{Comparing Machine Learning and Deep Learning Models with Attention Mechanisms for Multiple Source Code Authorship Attribution\\
-\thanks{Identify applicable funding agency here. If none, delete this.}
+\title{Comparing Machine Learning and Deep Learning Models with Attention Mechanisms for Multiple Source Code Authorship Attribution
+\thanks{The work reported here was supported by the Cultural and Educational Grant Agency of Slovak Republic (KEGA) under grant No. KG 014STU-4/2024.}
 }
 
 \author{
-\IEEEauthorblockN{Richard Čerňanský}
-\IEEEauthorblockA{\textit{Department Name}\\
-\textit{Organization}\\
-City, Country\\
-email@example.com}
+\IEEEauthorblockN{1\textsuperscript{st} Bc. Richard Čerňanský}
+\IEEEauthorblockA{
+\textit{Faculty of Informatics and Information Technologies} \\
+\textit{Slovak University of Technology}\\
+Bratislava, Slovakia \\
+richard.cernansky3@gmail.com}
 \and
-\IEEEauthorblockN{Ing. Juraj Petrík}
-\IEEEauthorblockA{\textit{Department Name}\\
-\textit{Organization}\\
-City, Country\\
-email@example.com}
+\IEEEauthorblockN{2\textsuperscript{nd} Ing. Juraj Petrík}
+\IEEEauthorblockA{
+\textit{Faculty of Informatics and Information Technologies} \\
+\textit{Slovak University of Technology}\\
+Bratislava, Slovakia \\
+juraj.petrik@stuba.sk}
 }
 
 \maketitle
@@ -76,8 +74,8 @@ email@example.com}
 \end{abstract}
 
 \begin{IEEEkeywords}
-Authorship attribution, machine learning, deep learning, BERT, attention mechanisms, source code analysis.
-\end{IEEEkeywords}
+    Authorship attribution, machine learning, deep learning, BERT, attention mechanisms, source code analysis
+    \end{IEEEkeywords}
 
 \section{Introduction}
 
@@ -96,7 +94,7 @@ BERT, which leverage contextual embeddings and self-attention mechanisms
 to extract more meaningful patterns from textual data.
 
 Despite the success of deep learning models in natural language 
-processing (NLP), their application to source code authorship attribution on different dataset sizes. 
+processing (NLP), their application to source code authorship attribution on different dataset sizes 
 remains relatively unexplored. Unlike natural language, source code 
 exhibits a more rigid syntax and structure, making its representation 
 a key challenge. Several approaches have been proposed, ranging from 
@@ -105,26 +103,91 @@ syntax tree (AST) transformations that capture program logic. However,
 it remains unclear which type of representation is most effective for 
 distinguishing authorship across different levels of dataset complexity.
 
-This study systematically compares machine learning and deep learning 
+In the first part we present important related work results in the field of source 
+code authorship attribution. Then we continue with explaining methods and techniques 
+that we used for developing and evaluating comparative framework of different models.
+Section 3 describes the models in more detail.
+The main part of this study systematically compares machine learning and deep learning 
 models, including Random Forests, BERT trained on tokenized source code, 
 BERT trained on AST representations, and an Attention-based Neural Network 
 (AttentionNN) utilizing AST-derived node-to-node paths. The evaluation is 
 conducted on a dataset of 3,756 C language functions from Google Code Jam 
-(GCJ) spanning 2009 to 2018 \cite{gcj}. Most of the works in the field
+(GCJ) spanning 2009 to 2018 \citet{petrik}. Most of the works in the field
 predict the authors based on files consisting of multiple language constructs, our 
 research however focuses on prediction of author given single function.
 The models are assessed based on their accuracy, precision, recall, and training efficiency across different 
-author set sizes.
-
-Through this comparison, we aim to determine which model best balances 
+author set sizes. Through this comparison, we aim to determine which model best balances 
 accuracy and computational efficiency, as well as the effectiveness of 
 different function representations for authorship attribution.
+
+\section{Related Work}
+
+\begin{table*}[!t]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/dataset_table.png}
+    \caption{Table summarizing state-of-the-art works in Source code Authorship Attribution (AA) with machine learning approach \citet{datasets}.}
+    \label{tab:datasets_table}
+\end{table*}
+
+A number of studies have explored source code authorship attribution using varying 
+data representations and model architectures. Early work focused on using statistical
+models trained on token frequency vectors or stylometric features. More recent works, 
+displayed on the table \ref{tab:datasets_table} show that traditional Machine
+Learning (ML) models like Random Forest (RF), Support Vector Machine (SVM) or
+Neural Network (NN) can provide reliable results on different sized datasets. 
+Specifically, Caliskan et al. \citet{caliskan} used TF-IDF with RF on 
+Java code and demonstrated strong attribution capabilities using features extracted 
+from abstract syntax trees and code formatting. However, there is no common 
+agreement among researchers for selecting the best machine learning classifier 
+and data features for source code AA. 
+
+In recent years, the development of transformer-based models like Bidirectional Encoder Transformer (BERT) has 
+significantly impacted Natural 
+Language Processing (NLP), particularly in areas such as Natural language 
+understanding and generation (NLG). However, their potential in the field 
+of authorship attribution, especially for source code, remains relatively 
+underexplored. In some works, they were compared to the state-of-the-art 
+models, showing promising results \citet{fi}. We are particularly interested 
+in pretrained models such as CodeBERT and GraphCodeBERT \citet{codebert}, 
+to source code. These models were initially developed for general code 
+understanding tasks (e.g., function naming, defect detection) but have shown 
+promising results in Authorship Attribution task when fine-tuned on labeled datasets. 
+Choi et. al.~\citet{choi} shows that Large Language Models (LLM) can be successfully utilized in 
+code authorship attribution tasks. However, their ultimate utility in 
+real-world deployment will struggle with costs, sophisticated prompt engineering, 
+model selection, hyperparameter
+choices, and an understanding of the models’ sensitivity to
+context. 
+
+Alon et al. introduced code2vec \citet{code2vec}, an attention-based neural 
+network that learns embeddings from paths within Abstract Syntax Tree (AST). 
+This architecture enables learning from structural representations of code while 
+remaining lightweight compared to transformer models. Attention Neural 
+Network (ANN), a similar concept, leverages node-to-node ANN paths to 
+predict function authorship. 
+Bogomolov et. al~\citet{bogomolov} also examined path-based models on JAVA dataset 
+consisting of 200 000 methods and reached 
+accuracies around 98\% with Path-based Neural Network and Path-based Random Forests.
+
+However, much of the existing work focuses on large datasets or file-level 
+attribution. For example, studies using GitHub datasets typically assume 
+access to full repositories or complete files. In contrast, authorship 
+attribution at the function level, especially on small datasets such as 
+our collection of GCJ solutions, remains unexplored. Moreover, another 
+issue lies in the absence of standardized benchmark datasets for the task, 
+as the current research relies on datasets with different properties in terms 
+of size, author set size, source code background and other.
+
+Moreover, little attention has been paid to the impact of function complexity 
+on model performance. Most prior evaluations rely on global accuracy metrics 
+without analyzing how model effectiveness varies across functions of differing 
+structural or semantic richness.
 
 \section{Methods}
 
 \subsection{Source Code Representation}
 
-In the paper \cite{information}, authors present division of features based on the method they use for extraction: 
+In the paper \citet{information}, authors present division of features based on the method they use for extraction: 
     
 \begin{itemize}
 
@@ -149,24 +212,25 @@ In the paper \cite{information}, authors present division of features based on t
 
 \end{itemize}
 
-\subsection{Abstract Syntax Tree (AST)}
+\begin{figure}[!b]
 
-\quad Based on the full definition \cite{sun_ast} Abstract syntax tree (AST) is a tree-based representation of source code, where nodes represent various elements of the source code 
-and paths represent relationships of the structure. AST is an inseparable part of compilation process for many reasons. It is used as an 
-intermediate representation of program utilized for optimization and generation of machine code. Nodes of the tree can be either internal 
-(non-leaf) or leafs. Internal nodes define the program's constructs or operations for their children. Leaf nodes store the actual textual value. 
-
-In the figure \ref{fig:ast_struc_example} is an example of a simple C function and its corresponding Abstract Syntax Tree (AST):
-
-\begin{figure}[!t]
     \centering
     % C code listing in a minipage
     \begin{minipage}{\columnwidth}
-    \begin{lstlisting}[caption={Simple C function for addition}, label={lst:add}, basicstyle=\footnotesize\ttfamily, frame=single, numbers=left]
-    int add(int a, int b) {
-        return a + b;
-    }
-    \end{lstlisting}
+        \begin{lstlisting}[
+            caption={Simple C function for addition},
+            label={lst:add},
+            basicstyle=\footnotesize\ttfamily,
+            frame=single,
+            numbers=left,
+            numberstyle=\tiny\color{gray},
+            numbersep=5pt,         % distance from code to line number
+            xleftmargin=2em        % indent the whole listing 2em from the left
+          ]
+          int add(int a, int b) {
+              return a + b;
+          }
+          \end{lstlisting}
     \end{minipage}
     
     \vspace{1em} % Adjust vertical space between listing and diagram
@@ -206,9 +270,20 @@ In the figure \ref{fig:ast_struc_example} is an example of a simple C function a
     ]
     \end{forest}
     }
-    \caption{(a) C function code listing and (b) corresponding AST diagram.}
+        % Figure 3: AST example
+    \caption{(a) C function for addition; (b) its Abstract Syntax Tree.}
+    \Description{Left panel: numbered C code listing “int add(int a, int b) { return a + b; }”. Right panel: AST tree with nodes for TranslationUnit, FunctionDefinition, BasicTypeSpecifier “int”, FunctionDeclarator “add(…)”, CompoundStatement, ReturnStatement, AddExpression, and IdentifierName leaves “a” and “b”.}
     \label{fig:ast_struc_example}
 \end{figure}
+
+\subsection{Abstract Syntax Tree (AST)}
+
+\quad Based on the full definition \citet{sun_ast} Abstract syntax tree (AST) is a tree-based representation of source code, where nodes represent various elements of the source code 
+and paths represent relationships of the structure. AST is an inseparable part of compilation process for many reasons. It is used as an 
+intermediate representation of program utilized for optimization and generation of machine code. Nodes of the tree can be either internal 
+non-leaf or leaf nodes. Internal nodes define the program's constructs or operations for their children. Leaf nodes store the actual textual value. 
+
+In the figure \ref{fig:ast_struc_example} is an example of a simple C function and its corresponding Abstract Syntax Tree (AST):
 
 \subsubsection{AST - types of features}
 
@@ -227,32 +302,37 @@ Features divide into 4 main kinds according to the nature of the information ext
 
 \subsubsection{Halstead complexity measures}
 
-For evaluation of complexity of examined functions we have used Halstead complexity 
-measures Difficulty, Volume, Effort \cite{halstead}. To aggregate them into single value, 
-we used weighted sum of the three metrics weighting them in ratios 4:3:3 respectively. 
-We did not incorporate Halstead length because we did separate analysis on length.
+From Figure~\ref{fig:distr_lens}, we observe that functions 
+vary both in their length and the same applies also to the structural complexity of their ASTs. 
+Therefore, we decided to evaluate the models' performance in terms of function 
+complexity. There are various measures of complexity and for our purposes, 
+we selected two: the simple length in tokens and a measure called Halstead 
+complexity, which quantifies Halstead Difficulty, Volume, and Effort \citet{halstead}. 
+To aggregate them into single value, we used weighted sum of the three metrics 
+weighting them in ratios 4:3:3 respectively. We chose these ratios because it reflects both the theoretical importance 
+and the empirical scale of the three metrics. Halstead Difficulty is most directly 
+tied to cognitive complexity, so we give it a slightly larger share (40 \%), 
+while Volume (30 \%) and Effort (30 \%) each make substantial but secondary 
+contributions. Before applying these weights we normalize each metric 
+to the same range, so that the weight split yields a balanced 
+composite score—capturing “how hard” (Difficulty), “how big” (Volume), 
+and “how much work” (Effort) in one single complexity value. We did not 
+incorporate Halstead length because we did separate analysis on length.
 
 \subsection{Our Data Representation}
 For training the models, we constructed our prediction task data pipeline like this:
-
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=3.5cm,height=5cm]{figures/high_level_prediciton_task.png}
-    \caption{\cite{compiler_based} High-level overview of the function classification prediction task.}
-    \label{fig:predictive_task}
-\end{figure}
 
 We utilized various 
 types of representations of single function's raw source code to provide the models with data.
 These include word tokenized TF-IDF vectors for Random Forests, BPE of raw source code for
 BERT, linearized AST pre-order traversal for BERT and representation set of randomly selected 600 node-to-node paths for AttentionNN.  
-PsycheC project's C language frontend parser \cite{psychec} was used for parsing the code into ASTs. Each model was trained in Tensorflow.Keras framework and with different author set sizes to evaluate scalabillity. The different set sizes were
+PsycheC project's C language frontend parser \citet{psychec} was used for parsing the code into ASTs. Each model was trained in Tensorflow.Keras framework and with different author set sizes to evaluate scalability. The different set sizes were
 110, 27, 11, 3 with each having increased demands on minimal function count than the one before. The minimal function counts per author for the sizes were 25, 40, 50, 58 respectively.
 Table \ref{tab:basic_props} summarizes the basic properties of our datasets.
 
 \begin{table}[!b]
     \centering
-    \caption{Basic properties of our different datasets.}
+    \caption{Basic properties of our various datasets.}
     \label{tab:basic_props} % label placed AFTER caption
     \begin{tabular}{|c|l|l|}
         \hline
@@ -269,7 +349,14 @@ Table \ref{tab:basic_props} summarizes the basic properties of our datasets.
     \end{tabular}
 \end{table}
 
-    
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=3.5cm,height=5cm]{figures/high_level_prediciton_task.png}
+    \caption{\citet{compiler_based} Pipeline overview for source-code authorship classification.}
+    \Description{Flowchart showing raw functions parsed into tokens and ASTs, features extracted (TF-IDF, AST paths, BERT embeddings), and three classifiers (Random Forest, BERT, AttentionNN) producing author predictions.}
+
+    \label{fig:predictive_task}
+\end{figure}   
     
 
 \subsection{Data preprocessing \& Exploratory data analysis}
@@ -279,8 +366,83 @@ remove outlying authors that have multiple times more samples than is the averag
 that could not be parsed into an AST were also eliminated to ensure consistency in the datasets. This allows for a fair assessment of each model, 
 as they utilize different representations of function data. For further analysis, we needed to see the frequency distributions of authors. 
 
+\begin{figure}[!t]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\linewidth]{figures/distribution_names.pdf}
+      \caption{Functions per author.}
+      \label{fig:distr_names}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\linewidth]{figures/distr_lens_tokens.pdf}
+      \caption{Function length in tokens.}
+      \label{fig:distr_lens}
+    \end{subfigure}
+    \caption{Frequency distributions of functions per author and of function lengths.}
+    \Description{Two histograms: left shows the long‐tail distribution of functions across authors; right shows most functions fall between 10 and 50 tokens.}
+    \label{fig:eda_distr}
+  \end{figure}
+  
 
-\begin{table*}[!t]
+
+From the figure \ref{fig:distr_lens} we can see that the most of our dataset's 
+functions lengths lie between 10 and 50 tokens which makes our goal of authorship attribution of single function
+harder than if given a whole file consisting of multiple functions or code blocks in sense that for the prediction
+most of the time we only have from 10 to 50 tokens available to find the correct author.
+After having all of the functions' source codes ready in the suitable form for the model to train we 
+performed the training and evaluation on 4 different model setups that are presented in next section.
+The high-level overview of the pipeline is illustrated in the figure~\ref{fig:predictive_task}.
+
+\section{Models setup \& training}
+
+In this section we will discuss the training strategies and setup for the examined models.
+Random Forests and AttentionNN models were trained using Stratified Cross validation strategy that ensures, that each author is evenly distributed
+across the folds. Number of folds was set to 5 and 3 folds were used for training, 1 for validation and 1 for testing.
+As training of BERT takes a lot more time than the other 2, we just repeated the training 3 times and 
+observed variance in evaluation metrics lower than 1\%.
+
+\subsection{Random Forests}
+
+For comparison purposes, we have chosen Random Forests as standard approach to text based authorship attribution. 
+They were trained on word-level tokens using the regex pattern \verb|r"\b\w+\b"|, which matches words separated by word boundary characters.
+First we used Grid search to optimize these hyperparameters:
+\begin{itemize}
+    \item \textbf{n\_estimators}: \{50, 100, 200, 500\}
+    \item \textbf{max\_depth}: \{10, 20, 30, None\}
+    \item \textbf{min\_samples\_split}: \{2, 5, 10\}
+    \item \textbf{min\_samples\_leaf}: \{1, 2, 4\}
+    \item \textbf{max\_features}: \{"sqrt", "log2", None\}
+    \item \textbf{bootstrap}: \{True, False\}
+\end{itemize}
+
+and then we trained the model using the best hyperparameters found. Since each 
+dataset was tuned separately via grid search, the optimal hyperparameters vary 
+and are not listed here.
+
+\subsection{Bidirectional Encoder Representations from Transformers - BERT}
+
+Transformer-based models such as BERT leverage the self-attention 
+mechanism to compute contextual embeddings for each code token by weighting 
+interactions across the entire sequence, thus capturing both local syntactic 
+patterns and long-range semantic dependencies. Pre-trained on massive corpora 
+via masked language modeling and next-sentence prediction, BERT encodes code 
+snippets into rich representations summarized by the special \texttt{[CLS]} token. 
+By fine-tuning this encoder with a lightweight classification head on labeled 
+code–author pairs, the model learns author-specific stylistic cues like naming conventions, formatting habits, 
+and preferred idioms.
+
+For both BERT training setups we used Microsoft's pre-trained graphcodebert-base \citet{codebert} that already understands general programming concepts like 
+control structures, loops or functions and is able to capture differences between authors faster. We also used the graphcodebert tokenizer which uses 
+Byte pair encoding that merges frequently occurring character sequences into tokens, which is appropriate for data like source code of programming language
+that has very rigid syntax. The comments in all code samples were filtered out so the attribution task
+is 'fair' across the models that utilize ASTs.
+
+As mentioned, we have trained the BERT model on two distinct data representations. Tokenized RAW source code and tokenized AST pre-order traversal
+to see how the model reacts to these representations and how useful it may be to learn from the AST structural patterns in comparison to AttentionNN 
+that utilizes node-to-node paths.
+
+\begin{table*}[!ht]
     \renewcommand{\arraystretch}{1.3}
     \caption{Comparison of models across author attribution accuracy and training time for different author set sizes.}
     \label{tab:comparison_models}
@@ -299,74 +461,16 @@ as they utilize different representations of function data. For further analysis
     \end{tabular}
 \end{table*}
 
-\begin{figure}[!t]
-    \centering
-    \begin{subfigure}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/distribution_names.pdf}
-        \caption{Frequency distribution of author names}
-        \label{fig:distr_names}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/distr_lens_tokens.pdf}
-        \caption{Frequency distribution of function lengths}
-        \label{fig:disrt_lens}
-    \end{subfigure}
-    \caption{Important frequency distributions of our dataset.}
-    \label{fig:eda_distr}
-\end{figure}
-
-From the figure \ref{fig:distr_names} we can see that the most of our dataset's 
-functions lengths lie between 10 and 50 tokens which makes our goal of authorship attribution of single function
-harder than if given a whole file consisting of multiple functions or code blocks in sense that for the prediction
-most of the time we only have from 10 to 50 tokens available to find the correct author.
-
-\section{Models setup \& training}
-
-In this section we will discuss the training strategies and setup for the examined models.
-Random Forests and AttentionNN models were trained using Stratified Cross validation strategy that ensures, that each author is evenly distributed
-across the folds. Number of folds was set to 5 and 3 folds were used for training, 1 for validation and 1 for testing.
-As training of BERT takes a lot more time than the other 2, we just repeated the traing 3 times and 
-observed variance in evaluation metrics lower than 1\%.
-
-\subsection{Random Forests}
-
-For comparison purposes, we have chosen Random Forests as standard approach to text based authorship attribution. 
-They were trained on word-level tokens using the regex pattern \verb|r"\b\w+\b"|, which matches words separated by word boundary characters.
-Firt we used grid search to optimize these hyperparameters:
-\begin{itemize}
-    \item \textbf{n\_estimators}: \{50, 100, 200, 500\}
-    \item \textbf{max\_depth}: \{10, 20, 30, None\}
-    \item \textbf{min\_samples\_split}: \{2, 5, 10\}
-    \item \textbf{min\_samples\_leaf}: \{1, 2, 4\}
-    \item \textbf{max\_features}: \{"sqrt", "log2", None\}
-    \item \textbf{bootstrap}: \{True, False\}
-\end{itemize}
-
-and then we trained the model using the best hyperparameters found.
-
-\subsection{BERT}
-
-For both BERT training setups we used Microsoft's pretrained graphcodebert-base \cite{codebert} that already understands general programming concepts like 
-control structures, loops or functions and is able to capture differences between authors faster. We also used the graphcodebert tokenizer which uses 
-Byte pair encoding that merges frequently occurring character sequences into tokens, which is appropriate for data like source code of programming language
-that has very rigid syntax. The comments in all code samples were filtered out so the attribution task
-is 'fair' across the models that utilize ASTs.
-
-As mentioned, we have trained the BERT model on two distinct data representations. Tokenized RAW source code and tokenized AST pre-order traversal
-to see how the model reacts to these representations and how useful it may be to learn from the AST structural patterns in comparison to AttentionNN 
-that utilizes node-to-node paths.
-
 \subsection{Attention Neural Network}
 
 To capture all three of the structural, semantic and syntactic features in a number vector that could be somehow fed into a neural network classifier. 
-Code2vec \cite{code2vec} proposes solution design that extracts so called 'path-contexts' which are encoded into vector space using the embedding values 
+Code2vec \citet{code2vec} proposes solution design that extracts so called 'path-contexts' which are encoded into vector space using the embedding values 
 of its components.
 Path-contexts capture the node-to-node path in concise manner as it consist of triplets of (start node, the path of nodes kinds, terminal node).
 Each distinct node is encoded with the data value it carries and each distinct path is encoded as a string of nodes' kinds in between the start and terminal node.
-The model then learns to distinguish the authors utilizing the attention mechanism, giving larger weights to contexts that help to reveil the author the most.
+The model then learns to distinguish the authors utilizing the attention mechanism, giving larger weights to contexts that help to reveal the author the most.
+
+
 
 \subsection{Evaluation methods}
 For evaluation purposes metrics such as validation Accuracy, Precision, Recall, Time to train model and Halstead complexity measures were captured to explain the models
@@ -492,29 +596,32 @@ accuracy for functions of different complexity obtaining interesting results rev
     
     \end{axis}
     \end{tikzpicture}
-    \caption{3D bar chart comparing Accuracy, Precision, and Recall across models and author set sizes.}
+    \caption{Accuracy, precision, and recall across models and author set sizes.}
+\Description{3D bar plot where the x-axis lists models (RF, BERT raw, BERT AST, AttentionNN), the y-axis shows author set sizes (110, 27, 11, 3), and the z-axis gives metric values; bars are blue for accuracy, red for precision, and brown for recall.}
     \label{fig:3d_bars}
 \end{figure*}
 
-    
 \section{Results}
 
 As we have mentioned, the models were mainly tested for their scalability with having more functions per author while decreasing the distinct author set size.
 Table \ref{tab:comparison_models} summarizes how each model performed in terms of accuracy and the time required for training (until the validation loss stopped decreasing) across diverse datasets
 and figure \ref{fig:3d_bars} visualizes the achieved performances on Accuracy, Precision and Recall. From table \ref{tab:comparison_models} we can say that BERT 
 trained on tokens extracted from the raw source code performed the best at each of the author set sizes, especially with accuracy over 90\% on the smallest set, however with the longest required time to train the model, more than 
-9.5 times longer than it took to train AttentionNN to its full potential and 36.4 times longer than the time required for Random Forests which scored just 4.8 percent less. Our RF experiment on dataset with 110 reached results similar to this study \cite{rf1}, 
-where they had 525 authors, but with 2-11 files per author and also included information from comments which we filtered out. In \cite{rf2}, authors reached accuracy of 84.5\% on 50 authors with and average of 42.8 files each similar to our setup for 
-27 authors. They scored 14\% more than we did, using the the features presented in \cite{caliskan}.
+9.5 times longer than it took to train AttentionNN to its full potential and 36.4 times longer than the time required for Random Forests which scored just 4.8 percent less. Our RF experiment on dataset with 110 reached results similar to this study \citet{rf1}, 
+where they had 525 authors, but with 2-11 files per author and also included information from comments which we filtered out. In \citet{rf2}, authors reached accuracy of 84.5\% on 50 authors with and average of 42.8 files each similar to our setup for 
+27 authors. They scored 14\% more than we did, using the the features presented in \citet{caliskan}.
 
-What also interested us is that From \texttt{set\_size=11} to \texttt{set\_size=3}, BERT improved only by 0.86\% which is the smallest improvement across all the experiments and indicates that increasing the minimum function 
+What also interested us is that from \texttt{set\_size=11} to \texttt{set\_size=3}, BERT improved only by 0.86\% which is the smallest improvement across all the experiments and indicates that increasing the minimum function 
 count per author from 50 to 58 had little impact on the model's ability to distinguish authors. 
 On the other hand, from being the worst, BERT fed with AST pre-order traversal scored a 40\% higher under these conditions. Unfortunately, we were unable to find any relevant sources against which to compare our BERT results.
 Nevertheless the following experiments conducted on other models, helped us understand advantages and disadvantages of BERT model for authorship attribution.
 
 The confusion matrix shows \ref{fig:conf_matrix_bert}, that the model performed best on 2 most represented authors
 (see \ref{fig:distr_names}). Although if we take 8 most represented authors, only 5 of them are also 
-the most accurately classified.
+the most accurately classified. Additionally, BERT and other models were not biased towards the most represented authors when tested on the 
+less represented authors. The only type of bias we have seen was on author that was not in the most represented group. Therefore, we conclude 
+that the bias arises not from class imbalance but from the characteristics of each author’s 
+functions (e.g., their purpose and functionality).
 
 In terms of overfit, BERT with tokenized source codes was able to generalize the datasets in effective manner reaching 1.41, 1.24, 1.05, 1.12 for overfit ratios 
 calculated like this
@@ -528,6 +635,8 @@ and only the latter two are under the limit of 1.2 - being optimally fitted.
 Random forests reached 1.51, 1.3, 1.24, 1.15 overfit ratios which still show a considerable amount of generalization. However AttentionNN was not that successful with generalizing 
 and with the dataset consisting of 3 distinct authors it got overfit of 1.4 and only increasing with each larger dataset, meaning insufficient data is being provided for the network so it starts memorizing particular 
 patterns instead of actually generalizing above authors, which does not allow the model to perform better on unseen data affecting its validation accuracy.
+
+
 
 \subsection{Comparing models' performance depending on the complexity of function}
 
@@ -564,81 +673,35 @@ to categorize when limited or not complex enough data is provided, not being abl
 On the other hand, the machine learning TF-IDF method struggles with the more complex data because the representation lacks context understanding and solely 
 relies on the number of occurrences in the sample.
 
-\subsection{Attention neural network - complexity over quantity}  \label{subsec:comp_over_quant}
-
-This model showed relatively promising results, indicating increasing dataset size and providing more complex data enhances its performance.
-Paper \cite{pbnn} presents similar model reaching 0.979\% accuracy with 40 authors but 3,021 files for each in programming language Java.
-
-Considering the observation in figure \ref{fig:misclass_lens}, where AttentionNN performed worst on lengths between 20 and 40 tokens,
-we assesed the model in a deeper manner. Evaluating accuracies across functions distributed into bins according to 2 metrics. 
-Number of nodes in the AST and depth of the AST of the function. 
-
-From the figure \ref{fig:ann_acc} we can deduce, there is an emerging trend in accuracy from bins of lower value to the bins of higher value.
-Eventhough the frequency distribution of both variables indicates more frequency on the lower values we observe a lower
-accuracy. This tells that the model is learning more about the author from structural complex functions than simple non-nesting and 
-control-flow divergent ones.
-
-
-\begin{figure}[!t]
+\begin{figure}[H]
     \centering
     \hspace*{-25pt}\includegraphics[width=1.2\columnwidth]{figures/misclass_lens.pdf}
-    \caption{Frequency distribution of misclassified function lengths (in tokens) for Random Forests, BERT, and AttentionNN.}
+    % Figure 8: Misclassifications by length
+\caption{Misclassification counts by function length for each model.}
+\Description{Overlaid line plots (blue=RF, red=BERT, brown=AttentionNN) showing number of misclassified functions binned by token length.}
     \label{fig:misclass_lens}
 \end{figure}
 
 
-
-
-\begin{figure}[!t]
+\begin{figure}[H]
     \centering
     \hspace*{-25pt}\includegraphics[width=1.2\columnwidth]{figures/misclass_hs.png}
-    \caption{Frequency distribution of misclassified function Halstead complexity for Random Forests and BERT.}
+    % Figure 9: Misclassifications by complexity
+\caption{Misclassification counts by Halstead complexity for RF and BERT.}
+\Description{Overlaid histograms (blue=RF, red=BERT) of misclassified functions versus composite Halstead complexity scores.}
     \label{fig:misclass_halstead}
 \end{figure}
 
+\subsection{Attention neural network - complexity over quantity}  \label{subsec:comp_over_quant}
 
+This model showed relatively promising results, indicating increasing dataset size and providing more complex data enhances its performance.
+Paper \citet{pbnn} presents similar model reaching 0.979\% accuracy with 40 authors but 3,021 files for each in programming language Java.
 
-\begin{figure}[!t]
-    \centering
-    % Scale to the column width (100%)
-    \includegraphics[width=\columnwidth]{figures/conf_matrix_sourcode_bert_ts27.pdf}
-    \caption{Confusion matrix for BERT trained on raw source code (author set size 27).}
-    \label{fig:conf_matrix_bert}
-\end{figure}
+Considering the observation in figure \ref{fig:misclass_lens}, where AttentionNN performed worst on lengths between 20 and 40 tokens,
+we assessed the model in a deeper manner. Evaluating accuracies across functions distributed into bins according to 2 metrics. 
+Number of nodes in the AST and depth of the AST of the function. 
 
-\section{Discussion}
-
-Our findings show that deep learning models, especially BERT, perform better than traditional machine learning methods for authorship attribution 
-of single functions. But this comes at a cost—BERT needs way more computation and training time. On the other hand, Random Forest with TF-IDF 
-tokenization held up surprisingly well, especially with larger author sets, and trained very fast.
-
-A key takeaway is that BERT trained on raw source code tokens consistently had the best accuracy across all dataset sizes. However, 
-its improvement from \texttt{set\_size=11} to \texttt{set\_size=3} was only 0.86\%, meaning increasing the minimum function count per author 
-after a certain point doesn’t do much. Interestingly, BERT using AST pre-order traversal struggled with large author sets but got way better 
-when we reduced the dataset to three authors. This shows how important it is to choose the right input representation for deep learning models.
-
-Looking at misclassifications, each model had its weak points. BERT had trouble with short functions that had low Halstead complexity— they 
-don’t provide enough meaningful context to determine the author. Random Forests, which rely more on statistical patterns than contextual 
-understanding, started failing as function complexity increased. This makes sense since TF-IDF representations capture token frequency but 
-don’t really understand code structure.
-
-
-
-AttentionNN, which works with AST-derived node-to-node paths, preferred structurally complex functions over simple ones. This means that 
-networks using structural information may do better with more complex functions rather than short, flat ones. However, AttentionNN didn’t 
-generalize well when data was limited, and it started overfitting when trained on small author sets. This shows we either need bigger 
-datasets or more regularization to prevent overfitting.
-
-The results highlight a clear trade-off between model complexity, training time, and accuracy. Deep learning models, while powerful, 
-require serious computational resources, making them harder to scale in real-world use cases. Random Forests might not be as accurate, 
-but they’re super efficient and a solid alternative when speed is a concern.
-
-Going forward, it would be interesting to combine these methods. For example a hybrid approach using BERT embeddings with Random Forest 
-classifier could balance accuracy and efficiency. Also, using graph-based neural networks to process ASTs more effectively might push 
-authorship attribution even further \cite{dependence_graphs}. Exploring data augmentation techniques or better regularization strategies could also help deep 
-learning models generalize better, especially with AST-based inputs.
-
-\begin{figure}[!t]
+\begin{figure}[!b]
     \centering
     \begin{subfigure}{\columnwidth}
         \centering
@@ -653,10 +716,55 @@ learning models generalize better, especially with AST-based inputs.
         \caption{Accuracy vs. AST depth}
         \label{fig:ann_acc_depth}
     \end{subfigure}
-    \caption{AttentionNN accuracy for functions with different structural complexities.}
+    \caption{AttentionNN accuracy as a function of AST complexity.}
+    \Description{Two line plots: (a) accuracy versus number of AST nodes, showing higher accuracy on larger trees; (b) accuracy versus AST depth, showing improvement on deeper structures.}
     \label{fig:ann_acc}
 \end{figure}
 
+From the figure \ref{fig:ann_acc} we can deduce, there is an emerging trend in accuracy from bins of lower value to the bins of higher value.
+Even though the frequency distribution of both variables indicates more frequency on the lower values we observe a lower
+accuracy. This tells that the model is learning more about the author from structural complex functions than simple non-nesting and 
+control-flow divergent ones.
+
+\section{Discussion}
+
+Our findings show that deep learning models, especially BERT, perform better than traditional machine learning methods for authorship attribution 
+of single functions. But this comes at a cost—BERT needs way more computation and training time. On the other hand, Random Forest with TF-IDF 
+tokenization held up surprisingly well, especially with larger author sets, and trained very fast.
+
+A key takeaway is that BERT trained on raw source code tokens consistently had the best accuracy across all dataset sizes. However, 
+its improvement from \texttt{set\_size=11} to \texttt{set\_size=3} was only 0.86\%, meaning increasing the minimum function count per author 
+after a certain point doesn’t do much. Interestingly, BERT using AST pre-order traversal struggled with large author sets but got way better 
+when we reduced the dataset to three authors. This shows how important it is to choose the right input representation for deep learning models.
+
+Looking at misclassifications, each model had its weak points. BERT had trouble with short functions that had low Halstead complexity— they 
+do not provide enough meaningful context to determine the author. Random Forests, which rely more on statistical patterns than contextual 
+understanding, started failing as function complexity increased. This makes sense since TF-IDF representations capture token frequency but 
+do not really understand code structure.
+
+AttentionNN, which works with AST-derived node-to-node paths, preferred structurally complex functions over simple ones. This means that 
+networks using structural information may do better with more complex functions rather than short, flat ones. However, AttentionNN did not 
+generalize well when data was limited, and it started overfitting when trained on small author sets. This shows we either need bigger 
+datasets or more regularization to prevent overfitting.
+
+The results highlight a clear trade-off between model complexity, training time, and accuracy. Deep learning models, while powerful, 
+require serious computational resources, making them harder to scale in real-world use cases. Random Forests might not be as accurate, 
+but they are super efficient and a solid alternative when speed is a concern.
+
+Going forward, it would be interesting to combine these methods. For example a hybrid approach using BERT embeddings with Random Forest 
+classifier could balance accuracy and efficiency. Also, using graph-based neural networks to process ASTs more effectively might push 
+authorship attribution even further \citet{dependence_graphs}. Exploring data augmentation techniques or better regularization strategies could also help deep 
+learning models generalize better, especially with AST-based inputs.
+
+
+\begin{figure}[!t]
+    \centering
+    % Scale to the column width (100%)
+    \includegraphics[width=\columnwidth]{figures/conf_matrix_sourcode_bert_ts27.pdf}
+    \caption{Confusion matrix for BERT trained on raw source code (27 authors).}
+\Description{27×27 heatmap with true authors on rows and predicted on columns; dark diagonal cells show high correct predictions, especially for the two most frequent authors, lighter off-diagonals indicate errors.}
+    \label{fig:conf_matrix_bert}
+\end{figure}
 
 \section{Conclusion}
 
@@ -678,50 +786,13 @@ careful feature selection capturing the complex relationships when applying deep
 Overall, this study demonstrates that while deep learning methods achieve state-of-the-art performance, traditional 
 machine learning approaches still hold value, especially in resource-constrained environments.
 
+\begin{acks}
+    The work reported here was supported by the 
+    Cultural and Educational Grant Agency of Slovak 
+    Republic (KEGA) under grant No. KG 014STU-4/2024.
+\end{acks}
 
-
-\begin{thebibliography}{00}
-    \bibitem{information}
-    X. He, A. H. Lashkari, N. Vombatkere, and D. P. Sharma, "Authorship attribution methods: A comprehensive survey," \textit{Information}, vol. 15, no. 3, article 131, 2024. [Online]. Available: https://www.mdpi.com/2078-2489/15/3/131. [Accessed: June 15, 2024].
-    
-    \bibitem{sun_ast}
-    W. Sun, C. Fang, Y. Miao, Y. You, M. Yuan, Y. Chen, Q. Zhang, A. Guo, and X. Guo, "Abstract Syntax Tree for Programming Language Understanding and Representation: How Far Are We?", \textit{arXiv preprint arXiv:2305.05929}, 2023. [Online]. Available: https://arxiv.org/abs/2303.01017. Accessed: June 15, 2024.
-    
-    \bibitem{codebert}
-    D. Guo, S. Ren, S. Lu, Z. Feng, D. Tang, S. Liu, L. Zhou, N. Duan, and A. Svyatkovskiy, "GraphCodeBERT: Pre-training Code Representations with Data Flow," \textit{arXiv preprint arXiv:2009.08366}, 2020. [Online]. Available: https://arxiv.org/abs/2009.08366. [Accessed: June 15, 2024].
-    
-    \bibitem{code2vec}
-    U. Alon, M. Zilberstein, O. Levy, and E. Yahav, "code2vec: Learning distributed representations of code," \textit{Proc. ACM Program. Lang.}, vol. 3, no. POPL, pp. 1–29, Jan. 2019. doi: 10.1145/3290353. [Online]. Available: https://github.com/tech-srl/code2vec.
-    
-    \bibitem{halstead}
-    K. Hariprasad and J. Valarmathi, "Software complexity analysis using halstead metrics," in \textit{Proc. 2017 Int. Conf. on Comput. Syst. and Informatics (ICEI)}, 2017, pp. 1109-1113.
-    
-    \bibitem{compiler_based}
-    D. Guo, S. Ren, S. Lu, Z. Feng, D. Tang, S. Liu, L. Zhou, N. Duan, and A. Svyatkovskiy, "Compiler-based graph representations for deep learning models of code," in \textit{Proc. CC 2020}, New York, NY, USA: ACM, 2020.
-    
-    \bibitem{gcj}
-    J. Petrik, "Function name classifier," 2024. [Online]. Available: \url{https://github.com/Jur1cek/gcj-dataset}. [Accessed: June 15, 2024].
-    
-    \bibitem{psychec}
-    L. T. C. Melo, R. G. Ribeiro, B. C. F. Guimarães, and F. M. Q. Pereira, ``Type inference for C: Applications to the static analysis of incomplete programs,'' \textit{ACM Trans. Program. Lang. Syst.}, vol. 42, no. 3, Art. no. 15, Nov. 2020. [Online]. Available: https://doi.org/10.1145/3421472
-
-    \bibitem{pbnn}
-    T. Girba, A. Kuhn, M. Seeberger, and S. Ducasse, ``How developers drive software evolution,'' in \textit{Eighth International Workshop on Principles of Software Evolution (IWPSE'05)}, 2005, pp. 113--122. [Online]. Available: https://doi.org/10.1109/IWPSE.2005.21
-
-    \bibitem{rf1}
-    C. McKnight and I. Goldberg, ``Style counsel: Seeing the (random) forest for the trees in adversarial code stylometry,'' in \textit{Proc. 2018 Workshop Privacy Electron. Soc.}, Master's thesis, Univ. of Waterloo, Waterloo, ON, Canada, Oct. 2018, pp. 138--142.
-
-    \bibitem{rf2}
-    L. Simko, L. Zettlemoyer, and T. Kohno, ``Recognizing and imitating programmer style: Adversaries in program authorship attribution,'' in \textit{Proceedings on Privacy Enhancing Technologies (PETS)}, vol. 2018, no. 1, 2018, pp. 127--144. [Online]. Available: https://doi.org/10.1515/popets-2018-0007
-
-    \bibitem{caliskan}
-    A. Caliskan-Islam \textit{et al.}, ``De-anonymizing programmers via code stylometry,'' in \textit{Proc. 24th USENIX Security Symp.}, 2015, pp. 255--270. [Online]. Available: https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/caliskan-islam
-
-    \bibitem{dependence_graphs}
-    R. Chen, L. Hong, C. Chunyan Lü and W. Deng, ``Author Identification of Software Source Code with Program Dependence Graphs,'' in \textit{Proc. 2010 IEEE 34th Annual Computer Software and Applications Conference Workshops}, Seoul, Korea (South), 2010, pp. 281--286, doi: 10.1109/COMPSACW.2010.56. [Online]. Available: https://doi.org/10.1109/COMPSACW.2010.56
-
-
-\end{thebibliography}
-    
+\bibliographystyle{IEEEtran}
+\bibliography{main}
 
 \end{document}
